@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- HEADER SECTION -->
+    <header class="app-header">
+      <h1>📝 Notes App</h1>
+      <button id="new-note-btn">+ New Note</button>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="app-main">
+
+      <!-- LEFT SIDEBAR: List of notes -->
+      <aside class="sidebar">
+        <h2>My Notes</h2>
+        <ul id="notes-list">
+          <!-- Notes will be added here by JavaScript -->
+        </ul>
+      </aside>
+
+      <!-- RIGHT PANEL: Editor area -->
+      <section class="editor-panel">
+
+        <!-- Note Title -->
+        <input
+          type="text"
+          id="note-title"
+          placeholder="Note title..."
+        />
+
+        <!-- Tab Buttons: Switch between editor and preview -->
+        <div class="tab-buttons">
+          <button class="tab-btn active" id="edit-tab">✏️ Edit</button>
+          <button class="tab-btn" id="preview-tab">👁️ Preview</button>
+        </div>
+
+        <!-- Markdown Editor -->
+        <textarea
+          id="note-editor"
+          placeholder="Write your note in Markdown...
+          
+# Heading
+**bold** _italic_
+- list item"
+        ></textarea>
+
+        <!-- Markdown Preview -->
+        <div id="note-preview" class="hidden"></div>
+
+        <!-- Bottom Actions -->
+        <div class="editor-actions">
+          <span id="save-status">All changes saved ✅</span>
+          <button id="delete-note-btn">🗑️ Delete Note</button>
+        </div>
+
+      </section>
+
+    </main>
+    <footer>Made By Manvi</footer>
+
+    <!-- Load marked.js library for Markdown support (we'll use this later) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Load our own JavaScript file LAST -->
+    <script src="app.js"></script>
+
+  </body>
+
+</html>
