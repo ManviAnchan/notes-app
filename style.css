@@ -3,8 +3,8 @@
    ============================================ */
 :root {
   --primary:        #5755d2;
-  --primary-dark:   #3949ab;
-  --danger:         #e53935;
+  --primary-dark:   #6564c3;
+  --danger:         #c53434;
   --bg-app:         #f0f2f5;
   --bg-sidebar:     #ffffff;
   --bg-editor:      #ffffff;
@@ -299,4 +299,11 @@ body {
    ============================================ */
 .hidden {
   display: none;
+}
+.empty-msg {
+  padding: 20px 16px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+  cursor: default;
 }
